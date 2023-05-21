@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 @Setter
 @Data
 @Entity
-public class polls {
+public class Polls {
     String color;
 
     String a;
