@@ -13,4 +13,6 @@ import javax.persistence.Entity;
 @Entity
 public class polls {
     String color;
+
+    String a;
 }
