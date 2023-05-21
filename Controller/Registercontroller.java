@@ -1,8 +1,10 @@
 package com.codeline.PollingApplication.Controller;
 
 import com.codeline.PollingApplication.Models.Register;
+import com.codeline.PollingApplication.RequestObjects.GetRegisterRequestObject;
 import com.codeline.PollingApplication.Service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +16,8 @@ public class Registercontroller {
     RegisterService registerService;
 
     @RequestMapping("/api/register")
-    public void saveRegister(){
-        createRegister();
+    public void saveRegister(@RequestBody GetRegisterRequestObject registerRequestObject ){
+        createRegister(registerRequestObject);
     }
 
     @RequestMapping("register/get")
@@ -26,10 +28,10 @@ public class Registercontroller {
 
 
 
-    public void createRegister(){
+    public void createRegister(GetRegisterRequestObject registerRequestObject){
         Register register= new Register();
-        register.setName("Ibrahim");
-        register.setPassword("Ibr12345");
+        register.setName(registerRequestObject.getName());
+        register.setPassword(registerRequestObject.getPassword());
         registerService.saveRegister(register);
     }
 }
