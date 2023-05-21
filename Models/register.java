@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Data
 @Entity
-public class register  extends BaseEntity{
+public class register{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
