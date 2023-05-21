@@ -1,8 +1,8 @@
 package com.codeline.PollingApplication.Controller;
 
 import com.codeline.PollingApplication.Models.Register;
+import com.codeline.PollingApplication.Service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
