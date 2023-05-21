@@ -5,6 +5,8 @@ import com.codeline.PollingApplication.Repository.RegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RegisterService {
 
@@ -14,6 +16,8 @@ public class RegisterService {
     public void saveRegister(Register register){
         registerRepository.save(register);
     }
+
+    public List<Register> getRegister() {return registerRepository.findAll();}
 }
 
 
