@@ -11,13 +11,11 @@ import javax.persistence.*;
 @Setter
 @Data
 @Entity
-public class Register{
+public class Register {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long Id;
-
-    @Column(name = "user_name")
     String name;
     String password;
 

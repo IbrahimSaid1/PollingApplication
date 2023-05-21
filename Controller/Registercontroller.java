@@ -11,7 +11,7 @@ public class Registercontroller {
     @Autowired
     RegisterService registerService;
 
-    @RequestMapping("register/create")
+    @RequestMapping("/api/register")
     public void saveRegister(){
         createRegister();
     }
