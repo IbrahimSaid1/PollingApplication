@@ -19,6 +19,12 @@ public class PollCreationController {
         createPollCreation(pollCreationRequestObject);
     }
 
+
+
+    @RequestMapping("pollcreation/get")
+    public List<PollCreatoin> getPollCreation(){
+        return pollCreationService.getPollCreation();}
+
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
         PollCreation pollCreation= new PollCreation();
         pollCreation.setQuestion(pollCreation.getQuestion());

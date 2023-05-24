@@ -17,8 +17,7 @@ public class Registercontroller {
 
     @RequestMapping("/api/register")
     public void saveRegister(@RequestBody GetRegisterRequestObject registerRequestObject ){
-        createRegister(registerRequestObject);
-    }
+        createRegister(registerRequestObject);}
 
     @RequestMapping("register/get")
     public List<Register> getRegister(){
