@@ -10,5 +10,11 @@ import javax.persistence.*;
 @Setter
 @Entity
 public class PollVote {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "OPTION_ID")
+    Long id;
 
+    @Column(name = "OPTION_VALUE")
+    String choices;
 }
