@@ -33,7 +33,7 @@ public class PollCreationController{
 
 
     @PostMapping("/polls")
-    public ResponseEntity<?> createPoll(@RequestBody PollCreation pollCreation){
+    public ResponseEntity<?> createPollCreation(@RequestBody PollCreation pollCreation){
         URI newPollUri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
