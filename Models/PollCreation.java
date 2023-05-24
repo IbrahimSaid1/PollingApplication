@@ -1,7 +1,6 @@
 package com.codeline.PollingApplication.Models;
 
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,9 +10,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-@Data
 @Entity
-@Table(name = "choices")
 public class PollCreation {
 
     @Id
@@ -25,9 +22,8 @@ public class PollCreation {
     String question;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Choices")
-    String choices;
+    @JoinColumn(name = "POLL_ID")
     @OrderBy
-    Set<Option> options = new HashSet<>();
+    Set<Option> choices = new HashSet<>();
 
 }
