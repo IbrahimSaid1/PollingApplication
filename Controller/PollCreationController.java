@@ -23,5 +23,6 @@ public class PollCreationController {
         PollCreation pollCreation= new PollCreation();
         pollCreation.setQuestion(pollCreation.getQuestion());
         pollCreation.setChoices(pollCreation.getChoices());
+        pollCreationService.savePollCreation(pollCreation);
     }
 }
