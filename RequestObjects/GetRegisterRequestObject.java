@@ -14,4 +14,6 @@ public class GetRegisterRequestObject {
     String name;
     String Password;
 
+
+
 }
