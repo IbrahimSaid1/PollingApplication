@@ -15,5 +15,31 @@ import java.net.URI;
 @RequestMapping("/api/polls")
 public class PollCreationController{
 
+    @Autowired
+    PollCreationRepository pollCreationRepository;
+
+    PollCreationController(PollCreationRepository pollCreationRepository){
+        this.pollCreationRepository= pollCreationRepository;
+    }
+
+
+
+    @GetMapping("/polls")
+    public ResponseEntity<Iterable<PollCreation>> getAllPolls() {
+        Iterable<PollCreation> polls = pollCreationRepository.findAll();
+        return new ResponseEntity<>(polls, HttpStatus.OK);
+    }
+
+
+
+    @PostMapping("/polls")
+    public ResponseEntity<?> createPoll(@RequestBody PollCreation pollCreation){
+        URI newPollUri = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(pollCreation.getId())
+                .toUri();
+        return new ResponseEntity<>(null, HttpStatus.CREATED);
+    }
 
 }
