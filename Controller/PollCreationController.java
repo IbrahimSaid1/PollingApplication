@@ -26,7 +26,7 @@ public class PollCreationController {
 
     @RequestMapping("pollcreation/get")
     public List<PollCreation> getPollCreation(){
-        return pollCreationService.getPollCreation();}
+        return pollCreationService.getPollCreation(); }
 
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
         PollCreation pollCreation= new PollCreation();
