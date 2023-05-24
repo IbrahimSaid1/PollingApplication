@@ -10,5 +10,12 @@ import javax.persistence.*;
 @Setter
 @Entity
 public class Option {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "OPTION_ID")
+    Long id;
+
+    @Column(name = "OPTION_VALUE")
+    String choices;
 
 }
