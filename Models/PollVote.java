@@ -18,6 +18,6 @@ public class PollVote {
 
     @ManyToOne
     @JoinColumn(name = "OPTION_ID")
-    String choices;
+    Option choices;
 
 }
