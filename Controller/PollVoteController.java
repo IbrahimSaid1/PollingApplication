@@ -29,6 +29,7 @@ public class PollVoteController {
     public long countOccurrences(@PathVariable("Choice") String choice) {
         return pollVoteService.countOccurrences(choice);
     }
+
     public void createPollVote(GetPollVoteRequestObject pollVoteRequestObject){
         PollVote pollVote= new PollVote();
         pollVote.setChoice(pollVoteRequestObject.getChoice());
