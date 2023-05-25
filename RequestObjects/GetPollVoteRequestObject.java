@@ -12,5 +12,5 @@ import lombok.Setter;
 @Setter
 public class GetPollVoteRequestObject {
 
-    Long Id;
+    String choice;
 }
