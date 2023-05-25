@@ -29,7 +29,10 @@ public class PollCreationController{
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
         PollCreation pollCreation= new PollCreation();
         pollCreation.setQuestion(pollCreationRequestObject.getQuestion());
-        pollCreation.setOptions(pollCreationRequestObject.getOptions());
+        pollCreation.setOption1(pollCreationRequestObject.getOption1());
+        pollCreation.setOption2(pollCreationRequestObject.getOption2());
+        pollCreation.setOption3(pollCreationRequestObject.getOption3());
+
         pollCreationService.savePollCreation(pollCreation);
 
     }
