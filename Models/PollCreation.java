@@ -18,9 +18,8 @@ public class PollCreation {
 
     Long Id;
     String question;
-    String option1;
-    String option2;
-    String option3;
+    String options;
+
 
 
 }

@@ -1,6 +1,5 @@
 package com.codeline.PollingApplication.Controller;
 
-import com.codeline.PollingApplication.Models.Option;
 import com.codeline.PollingApplication.Models.PollCreation;
 import com.codeline.PollingApplication.RequestObjects.GetPollCreationRequestObject;
 import com.codeline.PollingApplication.Service.PollCreationService;
