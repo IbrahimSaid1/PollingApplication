@@ -15,6 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -38,15 +39,9 @@ public class PollCreationController{
     }
 
 
-    @PostMapping("/polls")
-    public ResponseEntity<?> createPollCreation(@RequestBody PollCreation pollCreation){
-        URI newPollUri = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(pollCreation.getId())
-                .toUri();
-        return new ResponseEntity<>(null, HttpStatus.CREATED);
-    }
+    @RequestMapping("pollcreation/get")
+    public List<PollCreation> getPollCreation(){
+        return pollCreationService.getPollCreation();}
 
 
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
