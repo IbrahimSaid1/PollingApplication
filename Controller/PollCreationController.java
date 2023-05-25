@@ -20,18 +20,10 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/api/polls")
 public class PollCreationController{
 
     @Autowired
-    PollCreationRepository pollCreationRepository;
     PollCreationService pollCreationService;
-
-    PollCreationController(PollCreationRepository pollCreationRepository){
-        this.pollCreationRepository= pollCreationRepository;
-    }
-
-
 
     @RequestMapping("/api/pollcreation")
     public void savePollCreation(@RequestBody GetPollCreationRequestObject pollCreationRequestObject){
@@ -46,11 +38,10 @@ public class PollCreationController{
 
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
         PollCreation pollCreation= new PollCreation();
-        //pollCreation.setQuestion(pollCreationRequestObject.getQuestion());
-        pollCreation.setQuestion("What is your favorite color?");
-        pollCreation.setOption1("Red");
-        pollCreation.setOption2("Blue");
-        pollCreation.setOption3("Green");
+        pollCreation.setQuestion(pollCreationRequestObject.getQuestion());
+        pollCreation.setOption1(pollCreationRequestObject.getOption1());
+        pollCreation.setOption2(pollCreationRequestObject.getOption2());
+        pollCreation.setOption3(pollCreationRequestObject.getOption3());
         pollCreationService.savePollCreation(pollCreation);
 
     }
