@@ -13,6 +13,8 @@ import lombok.Setter;
 public class GetPollCreationRequestObject {
 
     String question;
-    String options;
+    String option1;
+    String option2;
+    String option3;
 
 }
