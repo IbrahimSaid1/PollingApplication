@@ -32,12 +32,10 @@ public class PollCreationController{
 
 
 
-    @GetMapping("/polls")
-    public ResponseEntity<Iterable<PollCreation>> getAllPolls() {
-        Iterable<PollCreation> polls = pollCreationRepository.findAll();
-        return new ResponseEntity<>(polls, HttpStatus.OK);
+    @RequestMapping("/api/pollcreation")
+    public void savePollCreation(@RequestBody GetPollCreationRequestObject pollCreationRequestObject){
+        createPollCreation(pollCreationRequestObject);
     }
-
 
 
     @PostMapping("/polls")
