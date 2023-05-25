@@ -13,11 +13,7 @@ public class PollVote {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "VOTE_ID")
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "OPTION_ID")
-    Option choices;
+    Long id;
+    String choice;
 
 }
