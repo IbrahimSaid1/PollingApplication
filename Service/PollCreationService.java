@@ -18,5 +18,9 @@ public class PollCreationService {
 
     public List<PollCreation> getPollCreation() {return pollCreationRepository.findAll();}
 
+    public void deletePollCreationById(Long pollCreationId) {
+        pollCreationRepository.deleteById(pollCreationId);
+    }
+
 
 }
