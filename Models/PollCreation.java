@@ -1,12 +1,12 @@
 package com.codeline.PollingApplication.Models;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter
 @Setter
@@ -14,16 +14,13 @@ import java.util.Set;
 public class PollCreation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "POLL_ID")
-    Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "QUESTION")
+    Long Id;
     String question;
+    String option1;
+    String option2;
+    String option3;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "POLL_ID")
-    @OrderBy
-    Set<Option> choices = new HashSet<>();
 
 }
