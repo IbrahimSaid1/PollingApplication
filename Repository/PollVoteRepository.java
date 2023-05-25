@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PollVoteRepository extends JpaRepository<PollVote, Long> {
     long countByChoice(String choice);
+
 }
