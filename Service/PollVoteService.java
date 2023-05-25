@@ -19,4 +19,8 @@ public class PollVoteService {
 
     public List<PollVote> getPollVote() {return pollVoteRepository.findAll();}
 
+
+    public long countOccurrences(String choice) {
+        return pollVoteRepository.countByChoice(choice);
+    }
 }
