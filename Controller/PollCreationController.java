@@ -15,9 +15,6 @@ public class PollCreationController{
     @Autowired
     PollCreationService pollCreationService;
 
-  c
-
-
     @RequestMapping("pollcreation/get")
     public List<PollCreation> getPollCreation(){
         return pollCreationService.getPollCreation();}
