@@ -15,10 +15,7 @@ public class PollCreationController{
     @Autowired
     PollCreationService pollCreationService;
 
-    @RequestMapping("/api/pollcreation")
-    public void savePollCreation(@RequestBody GetPollCreationRequestObject pollCreationRequestObject){
-        createPollCreation(pollCreationRequestObject);
-    }
+  c
 
 
     @RequestMapping("pollcreation/get")
@@ -30,6 +27,9 @@ public class PollCreationController{
     public void deletePollCreation(@PathVariable Long Id) {
         pollCreationService.deletePollCreationById(Id);
     }
+
+
+
 
 
     public void createPollCreation(GetPollCreationRequestObject pollCreationRequestObject){
