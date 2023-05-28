@@ -23,8 +23,6 @@ public class PollCreationController{
         return pollCreationService.getPollCreation();}
 
 
-
-
     @RequestMapping("poll/delete/{Id}")
     public void deletePollCreation(@PathVariable Long Id) {
         pollCreationService.deletePollCreationById(Id);
